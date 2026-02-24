@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Clique Beleza | Grupo VIP de Ofertas</title>
 
 <!-- META PIXEL -->
@@ -19,7 +19,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1433204391785054');
 fbq('track', 'PageView');
 </script>
-
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1433204391785054&ev=PageView&noscript=1"/>
@@ -27,94 +26,109 @@ src="https://www.facebook.com/tr?id=1433204391785054&ev=PageView&noscript=1"/>
 <!-- END PIXEL -->
 
 <style>
+:root{
+  --pink:#ff6fa6;
+  --pink2:#e75480;
+  --card: rgba(255, 214, 229, 0.55); /* rosinha transparente */
+  --text:#111; /* preto */
+}
+
+*{box-sizing:border-box;}
 
 body{
-margin:0;
-font-family: Arial, Helvetica, sans-serif;
-background: #ffffff;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
 }
 
 .container{
-max-width:1000px;
-width:100%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-@media(max-width:900px){
-.container{
-grid-template-columns:1fr;
-}
+  width:100%;
+  max-width:900px;
+  display:flex;
+  justify-content:center;
 }
 
 .card{
-background:#fff;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-padding:30px;
-}
-
-h1{
-font-size:28px;
-margin-bottom:15px;
-color:#e75480;
-}
-
-p{
-color:#555;
-line-height:1.6;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 20px;
-background:linear-gradient(45deg,#ff6fa6,#e75480);
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-border-radius:12px;
-transition:0.2s;
-}
-
-.btn:hover{
-opacity:0.9;
-}
-
-.image-box{
-width:100%;
-height:420px;
-border-radius:20px;
-overflow:hidden;
-background:#ffeaf2;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.image-box img{
-width:100%;
-height:100%;
-object-fit:cover;
+  width:100%;
+  max-width:520px;
+  background: var(--card);
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 14px 40px rgba(0,0,0,0.10);
+  border:1px solid rgba(231,84,128,0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .badge{
-background:#ffeaf2;
-padding:8px 12px;
-border-radius:30px;
-display:inline-block;
-margin-bottom:15px;
-font-size:14px;
-color:#e75480;
-font-weight:bold;
+  display:inline-block;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--text);
+  padding:8px 12px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:12px;
 }
 
+.logo-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin:10px 0 14px;
+}
+
+.logo{
+  width:110px;          /* tamanho pequeno */
+  height:110px;         /* quadradinho */
+  border-radius:18px;   /* arredondado */
+  object-fit:cover;     /* não estoura */
+  box-shadow:0 10px 22px rgba(0,0,0,0.10);
+  border:2px solid rgba(255,255,255,0.65);
+  background:#fff;
+}
+
+h1{
+  margin:0 0 10px;
+  font-size:26px;
+  color: var(--text);   /* preto */
+  text-align:center;
+}
+
+p{
+  margin:0;
+  color: var(--text);   /* preto */
+  line-height:1.6;
+  text-align:center;
+  font-size:14.5px;
+}
+
+.btn-wrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:14px 20px;
+  background: linear-gradient(45deg,var(--pink),var(--pink2));
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  border-radius:12px;
+  transition:0.2s;
+  min-width:240px;
+  text-align:center;
+}
+
+.btn:hover{opacity:0.92;}
 </style>
 </head>
 
@@ -122,27 +136,30 @@ font-weight:bold;
 
 <div class="container">
 
-<div class="card">
-<div class="badge">Grupo VIP</div>
-<h1>Ofertas Reais Todos os Dias 💗</h1>
-<p>
-Eu posto diariamente os melhores achadinhos de beleza, casa e maternidade.
-Sem spam. Só o que realmente vale a pena.
-</p>
+  <div class="card">
+    <div class="badge">Grupo VIP</div>
 
-<a class="btn" 
-href="https://chat.whatsapp.com/EricL4XnAHvHluEQoSY2jF" 
-target="_blank"
-onclick="fbq('track','Lead');">
-Quero entrar no grupo
-</a>
-</div>
+    <!-- IMAGEM PEQUENA ACIMA DO TEXTO -->
+    <div class="logo-wrap">
+      <img class="logo" src="Clique beleza logo (2).png" alt="Clique Beleza">
+    </div>
 
-<div class="card">
-<div class="image-box">
-<img src="Clique beleza logo (2).png" alt="Clique Beleza">
-</div>
-</div>
+    <h1>Ofertas Reais Todos os Dias 💗</h1>
+
+    <p>
+      Eu posto diariamente os melhores achadinhos de beleza, casa e maternidade.
+      Sem spam. Só o que realmente vale a pena.
+    </p>
+
+    <div class="btn-wrap">
+      <a class="btn"
+         href="https://chat.whatsapp.com/EricL4XnAHvHluEQoSY2jF"
+         target="_blank"
+         onclick="fbq('track','Lead');">
+        Quero entrar no grupo
+      </a>
+    </div>
+  </div>
 
 </div>
 
