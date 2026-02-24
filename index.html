@@ -1,320 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clique Beleza | Grupo VIP de Ofertas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clique Beleza | Grupo VIP de Ofertas</title>
 
-  <!-- Meta Pixel (opcional) -->
-  <script>
-    // Cole seu Pixel aqui se quiser rastrear PageView/Lead.
-    // Remova este bloco se não for usar.
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', ' 1433204391785054');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=PIXEL_ID_AQUI&ev=PageView&noscript=1"
-    />
-  </noscript>
-  <!-- Fim Pixel -->
+fbq('init', '1433204391785054');
+fbq('track', 'PageView');
+</script>
 
-  <style>
-    :root{
-      --pink-50:#fff5f8;
-      --pink-100:#ffe4ec;
-      --pink-200:#ffd1df;
-      --pink-400:#ff6fa6;
-      --pink-600:#e93d86;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --shadow: 0 18px 45px rgba(31,41,55,.10);
-      --radius: 22px;
-    }
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1433204391785054&ev=PageView&noscript=1"/>
+</noscript>
+<!-- END PIXEL -->
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% 10%, var(--pink-50), transparent 70%),
-        radial-gradient(900px 500px at 90% 20%, var(--pink-100), transparent 65%),
-        #fff;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
+<style>
 
-    .wrap{
-      width:100%;
-      max-width: 980px;
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:stretch;
-    }
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background: #ffffff;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
 
-    @media (max-width: 880px){
-      .wrap{grid-template-columns:1fr}
-    }
+.container{
+max-width:1000px;
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
 
-    .card{
-      background: var(--card);
-      border: 1px solid rgba(255,111,166,.18);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
+@media(max-width:900px){
+.container{
+grid-template-columns:1fr;
+}
+}
 
-    .left{
-      padding: 28px 26px;
-    }
+.card{
+background:#fff;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+padding:30px;
+}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom:12px;
-    }
+h1{
+font-size:28px;
+margin-bottom:15px;
+color:#e75480;
+}
 
-    .dot{
-      width:12px;height:12px;border-radius:999px;
-      background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
-      box-shadow: 0 8px 20px rgba(233,61,134,.25);
-    }
+p{
+color:#555;
+line-height:1.6;
+}
 
-    .brand span{
-      font-weight:700;
-      letter-spacing:.2px;
-    }
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 20px;
+background:linear-gradient(45deg,#ff6fa6,#e75480);
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+border-radius:12px;
+transition:0.2s;
+}
 
-    h1{
-      margin: 6px 0 10px;
-      font-size: 30px;
-      line-height: 1.15;
-    }
+.btn:hover{
+opacity:0.9;
+}
 
-    .sub{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.5;
-    }
+.image-box{
+width:100%;
+height:420px;
+border-radius:20px;
+overflow:hidden;
+background:#ffeaf2;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin: 14px 0 18px;
-    }
-    .chip{
-      background: linear-gradient(180deg, #fff, var(--pink-50));
-      border: 1px solid rgba(255,111,166,.18);
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      color:#374151;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
+.image-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-    .cta{
-      margin-top: 8px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+.badge{
+background:#ffeaf2;
+padding:8px 12px;
+border-radius:30px;
+display:inline-block;
+margin-bottom:15px;
+font-size:14px;
+color:#e75480;
+font-weight:bold;
+}
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 0;
-      text-decoration:none;
-      font-weight: 800;
-      cursor:pointer;
-      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
-      min-width: 240px;
-      text-align:center;
-    }
-
-    .btn-primary{
-      background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
-      color:#fff;
-      box-shadow: 0 14px 30px rgba(233,61,134,.25);
-    }
-    .btn-primary:hover{transform: translateY(-1px)}
-    .btn-ghost{
-      background:#fff;
-      color: var(--pink-600);
-      border: 1px solid rgba(233,61,134,.22);
-    }
-    .btn-ghost:hover{opacity:.9}
-
-    .fine{
-      margin-top: 14px;
-      font-size: 12px;
-      color: #9ca3af;
-      line-height: 1.5;
-    }
-
-    .right{
-      display:flex;
-      flex-direction:column;
-    }
-
-    .hero{
-      padding: 18px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .hero-img{
-      width:100%;
-      aspect-ratio: 4 / 3;
-      border-radius: 18px;
-      overflow:hidden;
-      border: 1px solid rgba(255,111,166,.18);
-      background: linear-gradient(135deg, var(--pink-50), #fff);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .hero-img img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-    }
-
-    .mini{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-
-    .mini .box{
-      background: linear-gradient(180deg, #fff, var(--pink-50));
-      border: 1px solid rgba(255,111,166,.18);
-      border-radius: 18px;
-      padding: 14px 12px;
-    }
-
-    .kpi{
-      font-weight:900;
-      color: var(--pink-600);
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-    .lbl{
-      font-size: 12px;
-      color: #6b7280;
-      line-height: 1.35;
-    }
-
-    .footer{
-      padding: 14px 18px 18px;
-      border-top: 1px solid rgba(255,111,166,.14);
-      font-size: 12px;
-      color:#9ca3af;
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <main class="wrap">
-    <!-- LADO ESQUERDO -->
-    <section class="card left">
-      <div class="brand">
-        <div class="dot"></div>
-        <span>Clique Beleza</span>
-      </div>
 
-      <h1>✨ Grupo VIP de Ofertas<br/>Beleza • Casa • Maternidade</h1>
+<div class="container">
 
-      <p class="sub">
-        Entrou, viu, pegou. Aqui eu posto <strong>achados reais</strong> todos os dias:
-        produtos de beleza, itens pra casa e maternidade com preço bom — sem enrolação.
-      </p>
+<div class="card">
+<div class="badge">Grupo VIP</div>
+<h1>Ofertas Reais Todos os Dias 💗</h1>
+<p>
+Eu posto diariamente os melhores achadinhos de beleza, casa e maternidade.
+Sem spam. Só o que realmente vale a pena.
+</p>
 
-      <div class="chips">
-        <div class="chip">💄 Maquiagem & Skincare</div>
-        <div class="chip">🧴 Cabelos & Autocuidado</div>
-        <div class="chip">🏡 Casa & Organização</div>
-        <div class="chip">🍼 Maternidade</div>
-        <div class="chip">⚡ Promo relâmpago</div>
-      </div>
+<a class="btn" 
+href="https://chat.whatsapp.com/EricL4XnAHvHluEQoSY2jF" 
+target="_blank"
+onclick="fbq('track','Lead');">
+Quero entrar no grupo
+</a>
+</div>
 
-      <div class="cta">
-        <a class="btn btn-primary"
-           href="https://chat.whatsapp.com/EricL4XnAHvHluEQoSY2jF"
-           target="_blank"
-           rel="noopener"
-           onclick="try{fbq('track','Lead')}catch(e){}">
-          💗 Quero entrar no grupo
-        </a>
+<div class="card">
+<div class="image-box">
+<img src="Clique beleza logo (2).png" alt="Clique Beleza">
+</div>
+</div>
 
-        <a class="btn btn-ghost"
-           href="#como-funciona">
-          Como funciona?
-        </a>
-      </div>
+</div>
 
-      <p class="fine" id="como-funciona">
-        ✅ Você entra no grupo e recebe as ofertas.<br/>
-        ✅ Se curtir, compra pelo link e pronto.<br/>
-        ✅ Sem spam: só achadinhos que valem a pena.
-      </p>
-    </section>
-
-    <!-- LADO DIREITO -->
-    <aside class="card right">
-      <div class="hero">
-        <div class="hero-img">
-          <!-- Troque pela sua imagem -->
-          <img src="URL_DA_SUA_IMAGEM" alt="Clique Beleza - Achados" />
-        </div>
-
-        <div class="mini">
-          <div class="box">
-            <div class="kpi">Ofertas diárias</div>
-            <div class="lbl">Postagens frequentes com foco em preço bom + utilidade.</div>
-          </div>
-          <div class="box">
-            <div class="kpi">Curadoria</div>
-            <div class="lbl">Só entra o que eu compraria/indicaria de verdade.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        © <span id="year"></span> Clique Beleza • Todos os direitos reservados
-      </div>
-    </aside>
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
